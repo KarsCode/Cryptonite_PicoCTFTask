@@ -4,3 +4,6 @@ Using grep I found the username and the line it was located on.
 
 Using sed I found it’s corresponding password and extracted the password on the 378th line using sed.
 I then used ROT13 to decode the flag. 
+
+![image](https://github.com/KarsCode/Cryptonite_PicoCTFTask/assets/117924364/f2c83a31-84aa-41bf-9a77-d26f1711983b)
+
