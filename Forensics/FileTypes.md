@@ -4,6 +4,11 @@ The given Flag.pdf is infact not a PDF file. On checking it with the file comman
 
 
 
+![image](https://github.com/KarsCode/Cryptonite_PicoCTFTask/assets/117924364/dba8f0d8-663f-4ee6-9fae-fc457d79b918)
+
+
+
+
 
 Using a simple Hexadecimal Decoder we can reveal the flag as follows: 
 
