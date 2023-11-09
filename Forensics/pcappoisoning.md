@@ -11,9 +11,12 @@ Live Packet Analysis: Users can monitor and inspect network traffic in real-time
 
 The Wireshark search filter tcp contains "pico" is used to filter packets that contain the specific string "pico" within the TCP payload.
 
-tcp: This part of the filter specifies that Wireshark should focus on TCP packets, filtering only those packets that use the Transmission Control Protocol.
+1. tcp: This part of the filter specifies that Wireshark should focus on TCP packets, filtering only those packets that use the Transmission Control Protocol.
 
-contains: This operator instructs Wireshark to look for a specific string within the TCP payload of the packets.
+2. contains: This operator instructs Wireshark to look for a specific string within the TCP payload of the packets.
 
-"pico": The string "pico" is the text Wireshark will search for within the TCP packet payloads. It's enclosed in double quotation marks to indicate the specific sequence of characters to be found. 
+3. "pico": The string "pico" is the text Wireshark will search for within the TCP packet payloads. It's enclosed in double quotation marks to indicate the specific sequence of characters to be found.
+
+   ![image](https://github.com/KarsCode/Cryptonite_PicoCTFTask/assets/117924364/3d9ec7cb-087c-4f43-94ea-529220299e5e)
+
 Hence, the flag is obtained.
