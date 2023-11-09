@@ -1,8 +1,29 @@
 ### NoPaddingNoProblem
 
-Understanding Unpadded RSA was the first step to solving this problem
+Understanding Unpadded RSA was the first step to solving this problem, as the given "Oracle" can decode anything except for the actual ciphertext.
+![image](https://github.com/KarsCode/Cryptonite_PicoCTFTask/assets/117924364/a1c85db7-7520-4e19-bd21-d640a1d68d41)
+
  
-We first take a known value, in this case 2 and then encrypt it by performing 2**e mod(n), after which c *x can be calculated. By the above discussed property we can come to the conclusion that 
-c * x = encrypted(m) * encrypted(2) = encrypted(m*2)
+We first take a known value, in this case 2 and then encrypt it by performing 2**e mod(n), after which c * x can be calculated. By the above discussed property we can come to the conclusion that 
+c * x = encrypted(m) * encrypted(2) = encrypted(m * 2)
 After getting the value of m*2 we divide by 2 and format + decode to get the flag. 
  
+
+
+```python
+n = 96033438345673167465258258704772602904391415945797653922390314032974220187064250022048023818851061183818777094593805132927738220395720206235956985148430154092830709649376484286536985362224145941807877995721694730333665213435401946279275909338253681519594338636834923592573071636951062285594511525132578415123
+e = 65537
+c = 22406407093395986905856597461062736818094986491830037313196360975601366311713063465454886025735601679067472120266972408508732965536117561736028693443418814159006036427270580324765640387718008065199961869242286532076279265009151067325829854019550480200261932967448229286803148806710187359239917147079733314786
+x = pow(2,e,n)
+print(x)
+
+print("\n",c*x)
+
+m = 580550060391700078946913236734911770139931497702556153513487440893406629034802718534645538074938502890769425795379846471930 //2 
+
+m_dec = bytearray.fromhex(format(m, 'x')).decode()
+print(m_dec)
+```
+
+![image](https://github.com/KarsCode/Cryptonite_PicoCTFTask/assets/117924364/dbde0d69-dbe6-4c39-9601-700d4166018f)
+
